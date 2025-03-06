@@ -30,13 +30,13 @@ jobs:
           fi
 
       - name: Upload windows and linux artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: golaps-${{ github.ref_name }}-${{ matrix.os }}-amd64
           path: bin/golaps-${{ github.ref_name }}-${{ matrix.os }}-amd64
 
       - name: Upload Macos artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: golaps-${{ github.ref_name }}-darwin-arm64
           path: bin/golaps-${{ github.ref_name }}-darwin-arm64
@@ -52,17 +52,17 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download artifacts - Windows
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: golaps-${{ github.ref_name }}-windows-amd64
       
       - name: Download artifacts - Linux
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: golaps-${{ github.ref_name }}-linux-amd64
 
       - name: Download artifacts - MacOS
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: golaps-${{ github.ref_name }}-darwin-arm64
 
