@@ -57,7 +57,7 @@ jobs:
           name: golaps-${{ github.ref_name }}-windows-amd64
       
       - name: Download artifacts - Linux
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: golaps-${{ github.ref_name }}-linux-amd64
 
